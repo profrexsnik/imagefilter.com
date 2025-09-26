@@ -154,3 +154,12 @@ function download(canvas, filename) {
   // Dispatch event
   link.dispatchEvent(e);
 }
+async function applyStyleTransfer(imageElement) {
+  const net = await bodyPix.load();
+  const segmentation = await net.segmentPerson(imageElement);
+  // Use segmentation to apply background blur or style
+}
+
+document.getElementById("ai-style-btn").addEventListener("click", () => {
+  applyStyleTransfer(document.getElementById("canvas"));
+});
