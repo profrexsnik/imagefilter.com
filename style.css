@@ -1,9 +1,151 @@
-canvas {
-  margin: auto;
-  background: #ececec;
-  width: 100%;
+/* Reset and base styles */
+* {
+  background-color:#750e1321;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
 }
 
+h4 {
+  font-weight: 600;
+  color: #444;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem;
+  border-bottom: 2px solid #43a70a;
+}
+
+.navbar-brand {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #af9f0c;
+}
+.navbar-brand:hover {
+  background-color: #c82333;
+  color: #2b0386;
+}
+.my-3 {
+  background-color: #43a70a;
+  color: #ccc;
+}
 .btn-disabled {
-  color: #fff !important;
+  background-color: #260475;
+  color: #da0d2f;
+}
+
+/* File upload */
+.custom-file {
+  position: relative;
+}
+
+.custom-file-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #17a2b8;
+  border-radius: 6px;
+  background-color: #e9f7fc;
+  cursor: pointer;
+}
+
+.custom-file-label {
+  margin-top: 8px;
+  display: block;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Filter buttons */
+.btn-group-sm .btn {
+  margin: 0 2px;
+}
+
+.filter-btn {
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #138496;
+  color: #fff;
+}
+.btn-warning:hover {
+  background-color: #da0d2f;
+  color: #05b45c;
+
+}
+
+/* Effect buttons */
+.btn-block {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  border: none;
+  color: #f5e8ea;
+  font-size: 30px;
+}
+
+.btn-dark:hover {
+  background-color: #527c05;
+}
+
+/* Action buttons */
+#download-btn,
+#revert-btn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#download-btn:hover {
+  background-color: #0069d9;
+}
+
+#revert-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .btn-group-sm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
 }
